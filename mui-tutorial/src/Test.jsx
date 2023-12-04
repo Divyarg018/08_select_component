@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, FormGroup, FormControlLabel, Checkbox } from '@mui/material';
+import { TextField, Button, FormGroup, FormControlLabel, Checkbox, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
 function Test() {
     const [inputs, setInputs] = useState({
@@ -28,6 +28,20 @@ function Test() {
                 <FormGroup>
                     <FormControlLabel control={<Checkbox onChange={() => setInputs((prev) => ({ ...prev, subscribe: !inputs.subscribe, }))} />} label="Subscribe To Newsletter" />
                 </FormGroup>
+
+                <FormControl fullWidth>
+                    <InputLabel >Age</InputLabel>
+                    <Select
+                      
+                        value={10}
+                        label="Age"
+                        onChange={handleChange}
+                    >
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                        <MenuItem value={30}>Thirty</MenuItem>
+                    </Select>
+                </FormControl>
                 <Button type='submit'>Submit</Button>
             </form>
         </div>
