@@ -6,7 +6,8 @@ function Test() {
         name: "",
         email: "",
         password: "",
-        subscribe: false
+        subscribe: false,
+        age: 0
     });
     function handleChange(e) {
         setInputs((prevState) => ({
@@ -31,9 +32,9 @@ function Test() {
 
                 <FormControl fullWidth>
                     <InputLabel >Age</InputLabel>
-                    <Select
+                    <Select name="age"
                       
-                        value={10}
+                        value={inputs.age}
                         label="Age"
                         onChange={handleChange}
                     >
